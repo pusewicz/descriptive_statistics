@@ -1,5 +1,8 @@
 language: erlang
 script: MIX_ENV=test mix do clean, test
+cache:
+  directories:
+  - vendor/elixir
 otp_release:
   - R16B
 before_install:
