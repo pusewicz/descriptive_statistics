@@ -36,4 +36,14 @@ defmodule DescriptiveStatisticsTest do
     assert 2.5 == DescriptiveStatistics.median([1,2,3,6])
     assert 2   == DescriptiveStatistics.median([1,2,2,6])
   end
+
+  test "#variance" do
+    assert 0 == DescriptiveStatistics.variance([1,1,1,1])
+    assert 8.25 == DescriptiveStatistics.variance([1,2,3,4,5,6,7,8,9,10])
+  end
+
+  test "#standard_deviation" do
+    assert 0 == DescriptiveStatistics.standard_deviation([1,1,1,1])
+    assert 2.8722813232690143 == DescriptiveStatistics.standard_deviation([1,2,3,4,5,6,7,8,9,10])
+  end
 end

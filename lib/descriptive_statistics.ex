@@ -41,4 +41,15 @@ defmodule DescriptiveStatistics do
       Enum.at(sorted, half)
     end
   end
+
+  def variance([]), do: nil
+  def variance ary do
+    mean = mean(ary)
+    sum(Enum.map(ary, &((mean - &1) * (mean - &1)))) /  __MODULE__.length(ary)
+  end
+
+  def standard_deviation([]), do: nil
+  def standard_deviation(ary) do
+    :math.sqrt(variance(ary))
+  end
 end
