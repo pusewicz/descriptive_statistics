@@ -5,7 +5,9 @@ defmodule DescriptiveStatistics.Mixfile do
     [ app: :descriptive_statistics,
       version: "0.0.1",
       elixir: "~> 0.11.2",
-      deps: deps ]
+      deps: deps,
+      description: "Descriptive Statistics is a library that allows you to compute simple descriptive statistics in Elixir. Inspired by https://github.com/thirtysixthspan/descriptive_statistics."
+    ]
   end
 
   # Configuration for the OTP application
