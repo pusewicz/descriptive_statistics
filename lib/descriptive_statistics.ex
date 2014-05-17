@@ -1,6 +1,6 @@
 defmodule DescriptiveStatistics do
   def sum ary do
-    :lists.sum ary
+    Enum.sum ary
   end
 
   def sort ary do
