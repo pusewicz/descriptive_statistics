@@ -4,8 +4,6 @@ cache:
   directories:
   - vendor/elixir
 otp_release:
-  - R16B
-  - 17.0-rc1
   - 17.0
 before_install:
   - mkdir -p vendor/elixir
