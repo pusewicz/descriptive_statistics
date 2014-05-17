@@ -5,6 +5,8 @@ cache:
   - vendor/elixir
 otp_release:
   - R16B
+  - 17.0-rc1
+  - 17.0
 before_install:
   - mkdir -p vendor/elixir
   - git clone --quiet https://github.com/elixir-lang/elixir.git vendor/elixir
