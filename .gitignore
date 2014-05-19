@@ -1,3 +1,13 @@
+### Erlang ###
+.eunit
+deps
+*.o
+*.beam
+*.plt
+erl_crash.dump
+
+
+### Elixir ###
 /_build
 /deps
 erl_crash.dump
