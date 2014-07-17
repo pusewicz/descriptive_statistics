@@ -4,7 +4,7 @@ defmodule DescriptiveStatistics.Mixfile do
   def project do
     [ app: :descriptive_statistics,
       version: "0.0.1",
-      elixir: "~> 0.13.2",
+      elixir: "> 0.13.2",
       deps: deps,
       package: [
         contributors: ["Piotr Usewicz", "Victor Martinez"],
