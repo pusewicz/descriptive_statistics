@@ -18,3 +18,7 @@ iex(3)> DescriptiveStatistics.mean [2, 6, 9, 3, 5, 1, 8, 3, 6, 9, 2]
 iex(4)> DescriptiveStatistics.median [2, 6, 9, 3, 5, 1, 8, 3, 6, 9, 2]
 5
 ```
+
+## Author
+
+Brought to you by [Piotr Usewicz](http://www.layer22.com).
