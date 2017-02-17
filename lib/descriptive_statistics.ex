@@ -52,4 +52,28 @@ defmodule DescriptiveStatistics do
   def standard_deviation(ary) do
     :math.sqrt(variance(ary))
   end
+
+  def range([]), do: nil
+  def range(ary) do
+    sorted = sort(ary)
+    List.last(sorted) - List.first(sorted)
+  end
+
+  def percentile_from_value([], _), do: nil
+  def percentile_from_value(ary, value) do
+    sorted = sort(ary)
+    Enum.find_index(sorted, fn(x) -> x == value end) / __MODULE__.length(ary) * 100
+    |> Float.ceil
+    |> round
+  end
+
+  def value_from_percentile([], _), do: nil
+  def value_from_percentile(ary, percentile) do
+    idx = percentile / 100 * __MODULE__.length(ary)
+      |> Float.ceil
+      |> round
+    ary
+    |> sort
+    |> Enum.fetch!(idx)
+  end
 end
