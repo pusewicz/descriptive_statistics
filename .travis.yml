@@ -1,14 +1,17 @@
-language: erlang
-script: MIX_ENV=test mix do clean, test
-cache:
-  directories:
-  - vendor/elixir
-otp_release:
-  - 17.0
-before_install:
-  - mkdir -p vendor/elixir
-  - git clone --quiet https://github.com/elixir-lang/elixir.git vendor/elixir
-  - make --quiet -C vendor/elixir > /dev/null 2>&1
-  - export PATH="$PATH:$PWD/vendor/elixir/bin"
-  - rm -rf deps
-  - MIX_ENV=test mix deps.get
+language: elixir
+matrix:
+  include:
+    - otp_release: 18.3
+      elixir: 1.3.2
+      script: mix test
+    - otp_release: 19.0
+      elixir: 1.3.2
+      script: mix test
+    - otp_release: 18.3
+      elixir: 1.4.2
+    - otp_release: 19.0
+      elixir: 1.4.2
+sudo: false
+before_script:
+  - mix deps.get --only test
+script: mix test
